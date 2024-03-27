@@ -10,19 +10,20 @@
 
             Cenário: configurando produto
             Dado : que eu acesse a aba de compra do sit
-            Quando :eu escolher o produto
+            Quando :eu selecionar o produto
             E :configurar <size> e <color>
-            Então : escolho tamanho <XS S M L XL> e cor <Blue Orange Red>
-
+            E :escolher tamanho <XS S M L XL> e cor <Blue Orange Red>
+            Então : levar ao carrinho de compra
+            
             Cenário: número limite de produto
             Dado : que eu acesse o EBAC-SHOP
             Quando : eu escolher meu <produto>
-            E : configurar <size> <color>
-            Então : deve permitir apenas 10produtos por venda
+            E : permitir apenas 10produtos por compra
+            Então : deve levar ao carrinho
 
             Cenário: clicar no botão: limpar o carrinho
             Dado :que eu acesse a página da EBAC-SHOP
-            Quando :eu clicar no botão <limpar>
+            Quando : clicar no botão <limpar>
             E :retornar a Tela
             Então : deve voltar ao estado original
 
